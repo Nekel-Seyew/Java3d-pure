@@ -4,7 +4,7 @@
  */
 package Camera;
 
-import Math.Polygon;
+import SGDE.Math.Polygon;
 import java.util.ArrayList;
 
 /**

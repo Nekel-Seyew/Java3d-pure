@@ -4,7 +4,7 @@
  */
 package Camera;
 
-import Math.Vector3;
+import SGDE.Math.Vector3;
 
 /**
  *
@@ -12,8 +12,14 @@ import Math.Vector3;
  */
 public class Camera {
     Vector3 direction;
+    Vector3 position;
+    Vector3 up;
     
     public Camera(){
-        direction = new Vector3(0,0,1);
+        direction = new Vector3(0,0,-1);
+        position = new Vector3();
+        up = new Vector3(0,1,0);
     }
+    
+    
 }

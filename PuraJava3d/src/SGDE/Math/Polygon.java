@@ -2,13 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Math;
+package SGDE.Math;
 
-import Camera.Texture;
-import Math.Vector3;
 import java.awt.Point;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  *

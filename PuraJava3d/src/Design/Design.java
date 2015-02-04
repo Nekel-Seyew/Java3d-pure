@@ -21,7 +21,7 @@ public class Design {
      * 
      * X and Y are similar to the screen, except that instead of Y starting at 0 at the top, it is 1, and bottom of screen is -1.
      * 
-     * Towards the user is -1 z and into the screen is 1 z
+     * Towards the user is 1 z and into the screen is -1 z
      */
     
     /*

@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Math;
+package SGDE.Math;
 
 /**
  *
@@ -12,7 +12,7 @@ public class Vector3 {
     private float x,y,z;
     
     public Vector3(){
-        x =0.0f;
+        x=0.0f;
         y=0.0f;
         z=0.0f;
     }
@@ -107,6 +107,13 @@ public class Vector3 {
     }
     public float getAngle(Vector3 v){
         return AMath.acos((this.x * v.x + this.y*v.y + this.z*v.z)/(this.length()*v.length()));
+    }
+    
+    public float[] toArray3(){
+        return new float[]{x,y,z};
+    }
+    public float[] toArray4(float w){
+        return new float[]{x,y,z,w};
     }
     
 }
