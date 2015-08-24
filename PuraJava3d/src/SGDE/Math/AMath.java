@@ -32,7 +32,7 @@ public class AMath {
      * @return whether or not the two numbers are within rounding error of one another(0.0000001), and thus the same number.
      */
     public static boolean equals(double a, double b){
-        return Math.abs(a-b)<=0.0000001;
+        return Math.abs(a-b) < 1e-9;
     }
     
     /**

@@ -116,4 +116,21 @@ public class Vector3 {
         return new float[]{x,y,z,w};
     }
     
+    @Override
+    public boolean equals(Object o){
+        if(!(o instanceof Vector3)){
+            return false;
+        }
+        Vector3 other = (Vector3)o;
+        return (AMath.equals(this.x, other.x) && AMath.equals(this.y, other.y)) && AMath.equals(this.z, other.z);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 79 * hash + Float.floatToIntBits(this.x);
+        hash = 79 * hash + Float.floatToIntBits(this.y);
+        hash = 79 * hash + Float.floatToIntBits(this.z);
+        return hash;
+    }
 }

@@ -32,6 +32,15 @@ public class Matrix {
         this.c = data[0].length;
     }
     
+    public static Matrix convert(float[][] data){
+        Matrix n = new Matrix();
+        n.data=data;
+        n.r=data.length;
+        n.c=data[0].length;
+        n.trans=transpose(data);
+        return n;
+    }
+    
     /**
      * takes in a transposed vector and multiplies it by this matrix. If there is a problem, it will return null;
      * @param vector a 1D float array of the same length as the number of columns of this matrix
@@ -103,7 +112,7 @@ public class Matrix {
     }
     
     
-    private float[][] transpose(float[][] data){
+    private static float[][] transpose(float[][] data){
         float[][] tr = new float[data[0].length][data.length];
         for(int i=0; i<data.length; i++){
             for(int j=0; j<data[i].length; j++){
@@ -126,6 +135,7 @@ public class Matrix {
         return hash;
     }
     
+    @Override
     public boolean equals(Object m){
         if(!(m instanceof Matrix)){
             return false;
